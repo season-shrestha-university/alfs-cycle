@@ -50,10 +50,10 @@
 
         <input type="checkbox" id="menu-toggle" aria-hidden="true" />
         <label
-          for="menu-toggle"
+          role="button"
           aria-expanded="false"
-          aria-controls="main-menu"
           aria-label="Toggle navigation menu"
+          onclick="document.getElementById('menu-toggle').click()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@
           />
         </figure>
         <svg
-          id="40-years-of-service"
+          id="service-40-years"
           xmlns="http://www.w3.org/2000/svg"
           width="704"
           height="223"
@@ -372,7 +372,6 @@
         </svg>
         <figure>
           <img
-            height="auto"
             width="600"
             src="./images/event-section/event.jpg"
             alt="Ride Through History"
