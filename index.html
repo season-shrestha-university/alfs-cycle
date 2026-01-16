@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alf's Cycle</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="/" aria-label="Alf's Cycle homepage">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="85"
+            height="46"
+            fill="none"
+            viewBox="0 0 85 46"
+          >
+            <path
+              fill="#000"
+              d="m4 35-3-1-1-3 1-2v-1l1-1-1 3 1 2h2l6-1 7-5 6-5-12 1-1 1v2H9l-1-1 1-2 1-1 6-2h9L37 7l5-2h-3l-9 1-3 2-1 1v4h-1l-1-2V9l1-2 4-2 3-1h13l6-2h1l-1 1h-2l-1 1-2 3-8 13-3 9-1 2 1 2 1-1h2l1-2 4-4v1l-4 4-3 2h-1l-1 1-2-1-1-3 1-3 1-3L44 5h-2l-7 5-8 9h7l2-1-1 1-1 1-1 1h-8l-10 9-6 3zm42-2h-2l-1-2 1-4 1-2 4-8 2-5 6-9 1-1 2-1 2-1h1v2l-1 3-2 3-6 9-7 6-2 4v3l1 1 1 1h1l2-1 2-2 3-4v1l-3 4-3 2zm2-12 9-11 4-6V1l-2 1-2 4zm-7 24h-3l-2-2v-3h1l2 3 4 1 3-1 4-3 6-12 3-8h-3l1-1 2-1h1l7-13 3-3 6-2 1 1 1 1v2h-1l-1-2h-2l-4 1-3 5-5 10h6l-1 1-3 1h-2l-3 5-8 15-4 4zM72 8zl2-4V3l-1-1V1h1l1-1 1 1v1l-1 4zm4 26h-2l-2-1-1-2v-2l1-1h1-1v1l1 2 1 2zh2l1-1 1-2v-1l-2-2-1-2-1-1v-1l-3 4 1-2 1-2 2-2 1-1 1-2h4l1 2v1l-1 2v-1l-1-2v-1h-1l-2 1-1 1v1l1 2 2 2 1 3-1 2-2 2z"
+            />
+          </svg>
+        </a>
+
+        <aside aria-label="Contact information">
+          <output aria-live="polite">Workshop is open</output>
+          <a href="tel:+447484000000" aria-label="Call Alf's Cycle workshop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="m20 21-6-1A18 18 0 0 1 4 10L3 4l1-1h5v1l1 3v1H9l-2 3 1 2 5 4 2-2 1-1h1l3 1h1v5zM6 9l2-2-1-2H5zm9 9 4 1v-2l-2-1z"
+              />
+            </svg>
+          </a>
+        </aside>
+
+        <input type="checkbox" id="menu-toggle" aria-hidden="true" />
+        <label
+          for="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="#000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 17h14M5 12h14M5 7h14"
+            />
+          </svg>
+        </label>
+
+        <ul id="main-menu" role="menu">
+          <li role="none">
+            <a href="/" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="/" role="menuitem">Bikes</a>
+          </li>
+          <li role="none">
+            <a href="/" role="menuitem">Accessories</a>
+          </li>
+          <li role="none">
+            <a href="/" role="menuitem">Services</a>
+          </li>
+          <li role="none">
+            <a href="/" role="menuitem">Alf's Events</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Keeping <span>Cheriton</span> cycling for generations</h1>
+        <svg
+          id="cycle-illustration"
+          xmlns="http://www.w3.org/2000/svg"
+          width="215"
+          height="215"
+          fill="none"
+          viewBox="0 0 215 215"
+        >
+          <path
+            fill="#000"
+            fill-opacity=".1"
+            d="M176 97q-9 1-15 4l-14-23 10-17a5 5 0 0 0-1-7q-2-2-4-1l-1-1h-19q-5 1-5 6 0 6 5 7h13l-6 8H82l11-21h5q4 0 5-5-1-4-5-4H73q-4 1-5 4 1 5 5 5h9l-28 48q-6-3-15-3a39 39 0 0 0 0 78 39 39 0 0 0 24-70l10-17 30 51h1v1h1v1h2l1 1h29c3 17 19 34 39 34a39 39 0 0 0 0-79M68 136a29 29 0 1 1-19-27l-14 25a5 5 0 0 0 4 7q3 0 4-2l15-25a29 29 0 0 1 10 22m40-10L82 82h51zm34-38 10 19q-13 8-15 26h-21zm15 28 10 17h-20q2-11 10-17m19 50c-15 0-27-11-29-24h29l1-1h1l1-1h1v-1l1-1v-3h-1v-1l-14-25a29 29 0 0 1 39 28c0 16-13 29-29 29"
+          />
+        </svg>
+        <div class="btn-group">
+          <button>Visit us today</button>
+          <button data-variant="outline">Book a repair</button>
+        </div>
+
+        <figure>
+          <img
+            src="./images/hero-image-one.jpg"
+            alt="Alf's Cycle workshop in 1983"
+          />
+          <img
+            src="./images/hero-image-two.jpg"
+            alt="Alf's Cycle workshop photoshoot promotion for newspaper"
+          />
+        </figure>
+        <svg
+          id="40-years-of-service"
+          xmlns="http://www.w3.org/2000/svg"
+          width="704"
+          height="223"
+          fill="none"
+          viewBox="0 0 704 223"
+        >
+          <path
+            fill="#5c1f2b"
+            d="m44 31 1 3L7 84l1-4h39l7-1 2-4h2l1 17H0v-3zm2 0v83H33V47l11-16zm56 0q10 0 17 4 8 4 12 12 4 7 4 17 0 9-5 18-3 7-11 12-7 5-18 5-9-1-17-4-8-4-11-12-5-8-5-17 0-10 5-18 3-7 11-12t18-5m-1 2q-7 0-12 9-4 8-4 23l2 18q3 7 7 10 3 3 8 3 8 1 12-8t4-24l-2-18-6-10zM241 9v3q-2 0-5 4-3 2-6 9l-24 47h-4l-29-53-5-6-3-1V9l14 1 21-1v3h-5l-4 2 1 5 20 39-3 3 14-28q4-8 4-13t-2-6-8-2V9zm-27 46v36l3 2 6 1v3h-36v-3l6-1q3 0 3-2l1-7V58l9 8zm97-46v25h-3l-3-13-6-7-10-2h-7l-6 1-2 2-1 6v64l1 6 2 2 6 1h7l11-2q4-2 7-8 2-6 3-15h3v18l1 10h-68v-3l6-1q3 0 3-2l1-7V22l-1-6q0-3-3-3l-6-1V9l22 1h30zm-20 43zv1h-22v-2zm4-17v35h-3l-2-8q0-3-4-6l-8-2v-2l7-2 4-4 2-5 1-6zm68-26 30 78 4 6 4 1v3h-34v-3q6 1 8-2 2-2-1-8l-22-59 2-3-20 52-2 10v6q1 3 4 3l6 1v3h-24v-3q3 0 5-3 3-2 5-9l29-73zm11 52v3h-37l1-3zm29-52h37q10 0 18 3l11 7q3 5 3 12l-1 8q-2 5-6 8-3 4-11 6-6 3-17 2h-12v-2h11q8 0 11-3 5-3 6-7l2-11q0-9-4-15-4-5-14-5-5 0-6 2l-2 8v62l1 7q0 2 3 2l6 1v3h-36v-3l6-1 3-2V16l-3-3-6-1zm22 44 21 2q11 1 15 5 6 3 7 11l3 13 2 7q1 2 4 2l3-1 3-2 1 1-6 6-9 2q-6 0-10-3-4-2-6-11l-2-12-2-9q-1-4-4-6-2-3-6-3h-14zm91-45 11 1 9 5h1l2-1 1-4h3l-1 13v14h-2l-3-12-7-10q-5-3-11-4-6 1-10 4-4 4-4 10 0 5 2 8 3 4 8 7l22 16q5 3 7 8 3 5 3 12 0 8-4 13-4 6-10 8l-15 3a37 37 0 0 1-19-5l-4-2-2 2-1 4h-3v-7l1-25h3l2 14q3 8 7 12 6 4 13 4l8-2q3-1 6-5l2-8-3-9q-1-4-6-7l-10-7-11-8-8-8q-3-5-3-12a20 20 0 0 1 13-20q7-2 13-2m101 23q9 0 15 4 7 3 11 10 4 8 4 20t-4 20q-4 7-11 10-6 4-15 4t-15-4-11-10q-3-8-3-20t3-20q4-7 11-10 6-4 15-4m0 3q-6 0-9 7-4 8-4 24 0 17 4 24 3 7 9 7t10-7 3-24-3-24-10-7m70-34a20 20 0 0 1 12 4q3 1 3 4l2 5q0 3-3 5-2 3-6 3l-6-3-2-6q-1-2 2-5l4-3-1-1-4-1-4 1-3 3-2 6v21h13v2h-13v49q0 6 3 8 3 3 9 2v3h-36v-3l6-1q3-3 2-8V35h-9v-2h9l1-12 2-9a22 22 0 0 1 11-10zM26 155l8 2 6 2q4 3 5-4h3l-1 22h-2l-3-9-5-7q-3-3-9-3-3 0-6 2t-3 6 3 7l5 5 16 11 5 7q3 3 2 9 0 5-3 9l-8 7a29 29 0 0 1-25-2l-3-1H9l-2 4H5v-25h3q1 7 3 12l5 8a14 14 0 0 0 13 2l4-3 1-6-3-9-10-8-8-6-6-6-2-9q0-6 3-9 3-4 8-6zm64 0q11 0 17 7 6 6 6 21H71v-3h28l-1-11-3-8-6-3q-5 0-8 5-3 6-4 18v8l2 14q3 6 7 9l8 2 6-1 6-3 5-7 2 1-4 9-9 7q-5 3-11 3-9 0-15-4-6-3-10-11-4-7-4-18 1-12 4-19 4-7 11-12 6-4 15-4m72 0 6 2 4 4 1 5-2 7q-3 3-7 3l-6-2-2-6 1-5 4-3-3-1-5 2-5 5-2 6-1 6v30q0 6 3 8 3 3 9 2v3h-36v-3l6-1 2-8v-39l-2-8q-2-3-6-3v-2l24-2v13l4-6 5-5zm74 2v2l-4 3-4 8-19 51h-6l-22-55-4-5-4-2v-2h32v2l-5 1-3 2 1 5 15 39-1 1 11-31 2-9-3-5q-3-2-7-3v-2h21m19-32q4 0 7 3 3 2 3 6t-3 7-7 2-7-2-3-7 3-6 7-3m9 30v54q0 5 2 8l6 1v3h-32v-3l6-1 2-8v-38q1-6-2-9-1-3-6-3v-2zm46 0a30 30 0 0 1 15 4l5 5 1 6-2 6-6 3-7-2-2-6 2-6q2-3 5-3l-3-3-6-1-6 2q-3 1-5 6-3 3-4 9a64 64 0 0 0 1 28q3 6 7 9a15 15 0 0 0 14 1l5-3 6-7 2 1-4 9-8 7q-4 3-12 3t-14-4-11-11-3-19 3-18a28 28 0 0 1 27-16m60 0q12 0 17 7 7 6 7 21h-42v-3h27l-1-11q0-5-3-8-2-3-5-3-5 0-9 5-3 6-4 18l1 1-1 4v3q0 9 3 14 2 6 6 9l8 2 6-1 6-3 5-7 3 1-5 9-8 7q-4 3-12 3-7 0-15-4-6-3-10-11-3-7-3-18 0-12 3-19 5-7 11-12 7-4 15-4"
+          />
+        </svg>
+        <p>
+          Alf’s Cycles has been a friendly, family-run bike shop at the heart of
+          our community. From children’s bikes to commuter and hobbyist cycles,
+          we offer honest advice, expert repairs, and a personal touch that
+          keeps customers coming back for generations.
+        </p>
+        <p>
+          Pop in to see our carefully chosen bikes, accessories, and safety gear
+          — or just for a chat about your next ride. At Alf’s, you’re always
+          part of the family.
+        </p>
+        <button>Explore Alf’s</button>
+      </section>
+      <section>
+        <h2>Premium Modern Collection</h2>
+        <div class="articles-grid">
+          <article>
+            <figure>
+              <img
+                src="./images/product-section/prod-one.jpg"
+                alt="Modern Classic One"
+              />
+              <figcaption>
+                <h3>Temple Cycles Singlespeed</h3>
+                <p>
+                  Sleek single-speed with timeless lines and quality steel
+                  frame.
+                </p>
+                <div>
+                  <span>#Type Hybrid</span>
+                  <span>#Frame Alloy</span>
+                  <span>#Size Medium</span>
+                </div>
+              </figcaption>
+            </figure>
+            <button>View catalogue</button>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="./images/product-section/prod-three.jpg"
+                alt="Modern  One"
+              />
+              <figcaption>
+                <h3>Nero Single‑Speed Bicycle</h3>
+                <p>Simple, stylish single-speed for urban rides.</p>
+                <div>
+                  <span>#Type Hybrid</span>
+                  <span>#Frame Alloy</span>
+                  <span>#Size Medium</span>
+                </div>
+              </figcaption>
+            </figure>
+            <button>View catalogue</button>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="./images/product-section/prod-two.jpg"
+                alt="Modern Classic One"
+              />
+              <figcaption>
+                <h3>Alex Moulton 4‑speed Bicycle –</h3>
+                <p>Retro-inspired multi-speed from a design classic brand.</p>
+                <div>
+                  <span>#Type Hybrid</span>
+                  <span>#Frame Alloy</span>
+                  <span>#Size Medium</span>
+                </div>
+              </figcaption>
+            </figure>
+            <button>View catalogue</button>
+          </article>
+        </div>
+      </section>
+      <section>
+        <h2>Everything your bikes needs</h2>
+        <div class="articles-grid">
+          <article>
+            <figure>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="124"
+                height="124"
+                fill="none"
+                viewBox="0 0 124 124"
+              >
+                <path
+                  stroke="#000"
+                  stroke-width="2"
+                  d="M85 28H39v3c0 26-18 34-18 34m38-3a26 26 0 0 0-25-26A31 31 0 0 0 3 67a46 46 0 0 0 46 47h3m0 0q1 7 2 7h13m-15-7q1-8 2-8h13m0 15v-15m0 15h10m-10-15h10M59 62a26 26 0 0 1-25 26m0 0q-9 0-16-5m16 5q-6 0-11-3m3-70h20m57-12H85v28c0 26 18 34 18 34m-7 23a26 26 0 1 1 0-52 26 26 0 0 1 0 52Z"
+                />
+              </svg>
+              <figcaption>
+                <h3>Bike Repairs</h3>
+                <p>
+                  We fix everything from flat tyres to full mechanical issues
+                </p>
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="124"
+                height="124"
+                fill="none"
+                viewBox="0 0 124 124"
+              >
+                <path
+                  stroke="#000"
+                  stroke-width="2"
+                  d="M98 52V10H36v62h36V36H10v62h42m20 21 31-31m6-16a10 10 0 1 0 10 11"
+                />
+              </svg>
+              <figcaption>
+                <h3>Maintenance & Services</h3>
+                <p>Routine servicing to keep every ride smooth and reliable.</p>
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="124"
+                height="124"
+                fill="none"
+                viewBox="0 0 124 124"
+              >
+                <path
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M104 84h8a50 50 0 1 0-100 0h8"
+                />
+                <path
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M98 84a36 36 0 0 0-36-36m20 36a20 20 0 0 0-20-19M62 90a6 6 0 1 0 0-12 6 6 0 0 0 0 12M62 78V38"
+                />
+              </svg>
+              <figcaption>
+                <h3>Quick Fixes</h3>
+                <p>
+                  Fast help for small problems, so you’re back on the road
+                  quickly.
+                </p>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <section>
+        <h2>Accessories For You</h2>
+        <div class="articles-grid">
+          <article>
+            <figure>
+              <img
+                src="./images/product-section/prod-one.jpg"
+                alt="Modern Classic One"
+              />
+              <figcaption>
+                <h3>Temple Cycles Singlespeed</h3>
+                <p>
+                  Sleek single-speed with timeless lines and quality steel
+                  frame.
+                </p>
+                <div>
+                  <span>#Type Hybrid</span>
+                  <span>#Frame Alloy</span>
+                  <span>#Size Medium</span>
+                </div>
+              </figcaption>
+            </figure>
+            <button>View catalogue</button>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="./images/product-section/prod-three.jpg"
+                alt="Modern  One"
+              />
+              <figcaption>
+                <h3>Nero Single‑Speed Bicycle</h3>
+                <p>Simple, stylish single-speed for urban rides.</p>
+                <div>
+                  <span>#Type Hybrid</span>
+                  <span>#Frame Alloy</span>
+                  <span>#Size Medium</span>
+                </div>
+              </figcaption>
+            </figure>
+            <button>View catalogue</button>
+          </article>
+          <article>
+            <figure>
+              <img
+                src="./images/product-section/prod-two.jpg"
+                alt="Modern Classic One"
+              />
+              <figcaption>
+                <h3>Alex Moulton 4‑speed Bicycle –</h3>
+                <p>Retro-inspired multi-speed from a design classic brand.</p>
+                <div>
+                  <span>#Type Hybrid</span>
+                  <span>#Frame Alloy</span>
+                  <span>#Size Medium</span>
+                </div>
+              </figcaption>
+            </figure>
+            <button>View catalogue</button>
+          </article>
+        </div>
+      </section>
+      <section class="event">
+        <h2>"Ride Through History"</h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="189"
+          height="195"
+          fill="none"
+          viewBox="0 0 189 195"
+        >
+          <path
+            fill="#8a0303"
+            fill-opacity=".2"
+            d="m0 151 40-58L7 30l67 20 49-50 2 70 63 31-66 24-10 69-43-55z"
+          />
+        </svg>
+        <figure>
+          <img
+            height="auto"
+            width="600"
+            src="./images/event-section/event.jpg"
+            alt="Ride Through History"
+          />
+          <figcaption>
+            <p>
+              Join us on 23rd January for a journey through 40 years of cycling
+              memories!
+            </p>
+            <button>View Event Details</button>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
