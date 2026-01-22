@@ -132,6 +132,59 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+th {
+  font-weight: 600;
+  color: #1a1a1a;
+  background-color: #f0f0f0;
+}
+
+td {
+  color: #1a1a1acc;
+}
+
+tbody td:first-child {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Event CTA section child elements */
+.event-cta {
+  text-align: center;
+}
+.event-cta h2 {
+  margin: 0 auto 1.5rem;
+}
+
+.event-cta > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.event-cta > p:last-of-type {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: 1.5rem;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ============================================
@@ -178,8 +231,8 @@ table {
 }
 
 body {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: var(--font-size-base);
@@ -344,7 +397,7 @@ nav > label svg {
 }
 
 nav aside output {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   background: var(--color-status-bg);
   padding: 0.2rem 0.5rem;
   border-radius: 100px;
@@ -599,7 +652,7 @@ section article figcaption span {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-primary);
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   line-height: 1.4;
   display: block;
 }
@@ -632,6 +685,11 @@ section article figcaption span {
 
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-cta > div {
+    flex-direction: column;
+    align-items: center;
   }
 
   .shop-details > div {
@@ -764,6 +822,10 @@ section article figcaption span {
   .articles-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+  }
+
+  .event-cta > div {
+    gap: 1.5rem;
   }
 
   section article figcaption h3 {
