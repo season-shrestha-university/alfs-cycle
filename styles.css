@@ -231,6 +231,10 @@ a {
   color: var(--color-text-secondary);
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 p + p {
   margin-top: 1.5rem;
 }
@@ -286,6 +290,7 @@ section {
 .primary-link:hover {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
+  text-decoration: none;
 }
 
 .primary-link:active {
@@ -652,6 +657,9 @@ nav[aria-label="Breadcrumb"] li[aria-current="page"] {
   transform: translateX(-50%);
 }
 
+.event a {
+  margin-top: 1.5rem;
+}
 /* ============================================
    EVENT CTA SECTION
    ============================================ */
