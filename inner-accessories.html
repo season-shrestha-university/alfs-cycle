@@ -16,6 +16,7 @@
   <body>
     <header>
       <nav aria-label="Main">
+        <!-- Logo -->
         <a href="/" aria-label="Alf's Cycle homepage">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,6 +32,7 @@
           </svg>
         </a>
 
+        <!-- Contact information -->
         <aside aria-label="Contact information">
           <output aria-live="polite">Workshop is open</output>
           <a href="tel:+447484000000" aria-label="Call Alf's Cycle workshop">
@@ -49,30 +51,24 @@
           </a>
         </aside>
 
-        <input type="checkbox" id="menu-toggle" aria-hidden="true" />
+        <!-- Navigation menu -->
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-btn"
+          aria-hidden="true"
+        />
         <label
+          for="menu-toggle"
+          class="menu-icon"
           role="button"
           aria-expanded="false"
           aria-label="Toggle navigation menu"
-          onclick="document.getElementById('menu-toggle').click()"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="#000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 17h14M5 12h14M5 7h14"
-            />
-          </svg>
+          <span class="navicon" aria-label="Hamburger menu icon"></span>
         </label>
 
+        <!-- Navigation menu list -->
         <ul id="main-menu" role="menu">
           <li role="none">
             <a href="/" role="menuitem">Home</a>
@@ -83,6 +79,7 @@
           <li role="none">
             <a href="/accessories.html" role="menuitem">Accessories</a>
           </li>
+
           <li role="none">
             <a href="/event.html" role="menuitem">Events</a>
           </li>

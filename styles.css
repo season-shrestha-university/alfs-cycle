@@ -1,7 +1,9 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* ============================================
+   CSS RESET
+   http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
-*/
+   ============================================ */
 
 html,
 body,
@@ -132,60 +134,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 1rem auto;
-  width: 100%;
-  max-width: 500px;
-}
-
-th,
-td {
-  padding: 0.5rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
-}
-
-th {
-  font-weight: 600;
-  color: #1a1a1a;
-  background-color: #f0f0f0;
-}
-
-td {
-  color: #1a1a1acc;
-  font-size: 1rem;
-}
-
-tbody td:first-child {
-  color: var(--color-primary);
-  font-size: 0.875rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* Event CTA section child elements */
-.event-cta {
-  text-align: center;
-}
-.event-cta h2 {
-  margin: 0 auto 1.5rem;
-}
-
-.event-cta > div {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-.event-cta > p:last-of-type {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  font-style: italic;
-  margin-top: 1.5rem;
-  max-width: 50ch;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ============================================
@@ -198,7 +146,9 @@ tbody td:first-child {
   --color-text-primary: #1a1a1acc;
   --color-text-secondary: #242424;
   --color-text-dark: #1a1a1a;
+  --color-text-light: #fafafa;
   --color-bg-primary: #f0f0f0;
+  --color-bg-event: #8a0303;
   --color-status-bg: #dcfce7;
   --color-status-outline: #86efac;
   --color-status-text: #166534;
@@ -206,6 +156,7 @@ tbody td:first-child {
   --color-overlay-light: rgba(26, 26, 26, 0.05);
   --color-overlay-medium: rgba(26, 26, 26, 0.1);
   --color-shadow: rgba(26, 26, 26, 0.1);
+  --color-separator: #6c757d;
 
   /* Font Sizes - Mobile (default) */
   --font-size-base: 1rem;
@@ -244,7 +195,10 @@ body {
   background-color: var(--color-bg-primary);
 }
 
-/* Typography */
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
 h1,
 h2,
 h3,
@@ -270,21 +224,17 @@ h2 {
   line-height: 1.25;
   width: 18ch;
   color: var(--color-primary);
-  line-height: 1.25;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: var(--color-text-secondary);
 }
 
-/* Paragraphs */
 p + p {
   margin-top: 1.5rem;
 }
 
-/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -312,14 +262,11 @@ section {
   padding: 3rem 0;
 }
 
-section:nth-of-type(4) {
-  padding-top: 0;
-}
-
 /* ============================================
-   PRIMARY LINKS (Button Style)
+   BUTTONS / LINKS
    ============================================ */
 
+/* Primary Links (Button Style) */
 .primary-link {
   display: inline-block;
   padding: 0.5rem 0.5rem;
@@ -328,7 +275,7 @@ section:nth-of-type(4) {
   font-family: inherit;
   border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
-  color: #fafafa;
+  color: var(--color-text-light);
   text-decoration: none;
   cursor: pointer;
   transition: var(--button-transition);
@@ -351,14 +298,11 @@ section:nth-of-type(4) {
   outline-offset: 2px;
 }
 
-/* ============================================
-   GHOST LINKS (Button Style)
-   ============================================ */
-
+/* Ghost Links (Button Style) */
 .ghost-link {
   display: inline-block;
   font-size: 0.875rem;
-  font-weight: 00;
+  font-weight: 400;
   font-family: inherit;
   background-color: transparent;
   color: var(--color-primary);
@@ -424,6 +368,50 @@ nav > label:hover {
 
 nav > label svg {
   display: block;
+}
+
+/* Hamburger icon */
+.navicon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-dark);
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.navicon::before,
+.navicon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-dark);
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.navicon::before {
+  top: -8px;
+}
+
+.navicon::after {
+  top: 8px;
+}
+
+/* Animate hamburger icon when menu is open */
+input[type="checkbox"]:checked ~ label .navicon {
+  background-color: transparent;
+}
+
+input[type="checkbox"]:checked ~ label .navicon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+input[type="checkbox"]:checked ~ label .navicon::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 nav aside output {
@@ -505,12 +493,58 @@ input[type="checkbox"]:checked ~ label {
 }
 
 /* ============================================
+   BREADCRUMB NAVIGATION
+   ============================================ */
+
+nav[aria-label="Breadcrumb"] {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+nav[aria-label="Breadcrumb"] ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav[aria-label="Breadcrumb"] li {
+  display: flex;
+  align-items: center;
+}
+
+nav[aria-label="Breadcrumb"] li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: var(--color-separator);
+  font-weight: 400;
+}
+
+nav[aria-label="Breadcrumb"] a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav[aria-label="Breadcrumb"] a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+nav[aria-label="Breadcrumb"] li[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ============================================
    HERO SECTION
    ============================================ */
 
 .hero {
   position: relative;
-  min-height: 400px;
 }
 
 .hero h1 {
@@ -545,6 +579,7 @@ input[type="checkbox"]:checked ~ label {
   margin-bottom: 2rem;
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .hero figure img {
@@ -567,13 +602,7 @@ input[type="checkbox"]:checked ~ label {
 
 .hero [id="service-40-years"] {
   position: absolute;
-  bottom: 45%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 352px;
-  height: auto;
-  aspect-ratio: 704 / 223;
+  bottom: 0%;
 }
 
 .hero a {
@@ -589,8 +618,8 @@ input[type="checkbox"]:checked ~ label {
 }
 
 .event h2 {
-  background: #8a0303;
-  color: white;
+  background: var(--color-bg-event);
+  color: var(--color-text-light);
   padding: 2rem 1.5rem 0rem;
   margin-bottom: 0;
 }
@@ -615,15 +644,42 @@ input[type="checkbox"]:checked ~ label {
   line-height: 1.25;
 }
 
-.event figcaption button {
-  margin-top: 2rem;
-}
-
 .event svg {
+  display: none;
   position: absolute;
   bottom: 10%;
   left: 60%;
   transform: translateX(-50%);
+}
+
+/* ============================================
+   EVENT CTA SECTION
+   ============================================ */
+
+.event-cta {
+  text-align: center;
+}
+
+.event-cta h2 {
+  margin: 0 auto 1.5rem;
+}
+
+.event-cta > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.event-cta > p:last-of-type {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-top: 1.5rem;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ============================================
@@ -633,9 +689,8 @@ input[type="checkbox"]:checked ~ label {
 .section-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
   align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
 .section-header h2 {
@@ -643,9 +698,8 @@ input[type="checkbox"]:checked ~ label {
 }
 
 .section-header a {
-  text-decoration: none;
   font-weight: 600;
-  font-size: var(--font-size-h4);
+  font-size: 1rem;
   text-decoration: underline;
   font-style: italic;
 }
@@ -660,7 +714,6 @@ section article {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 section article figure {
@@ -676,7 +729,6 @@ section article img {
   aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
 section article figcaption {
@@ -712,6 +764,89 @@ section article figcaption span {
 }
 
 /* ============================================
+   CONTENT SECTION
+   ============================================ */
+
+.content p {
+  max-width: 60ch;
+  margin: 0 auto 1.5rem;
+}
+
+.content figure figcaption {
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+/* ============================================
+   SHOP DETAILS
+   ============================================ */
+
+.shop-details dt {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: small;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+.shop-details div:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.shop-details iframe {
+  max-width: 100%;
+  height: 350px;
+  aspect-ratio: 450 / 350;
+  border: 0;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-overlay-medium);
+}
+
+th {
+  font-weight: 600;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-primary);
+}
+
+td {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+tbody td:first-child {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.p-0 {
+  padding: 0;
+}
+
+/* ============================================
    MEDIA QUERIES
    ============================================ */
 
@@ -721,17 +856,6 @@ section article figcaption span {
     --font-size-base: 1.125rem;
     --font-size-h1: 2.25rem;
     --font-size-h2: 2.5rem;
-  }
-
-  .hero [id="service-40-years"] {
-    max-width: min(600px, 100%);
-    bottom: 40%;
-    left: 50%;
-    aspect-ratio: 704 / 223;
-  }
-
-  .hero {
-    min-height: 500px;
   }
 
   .hero figure img:first-of-type {
@@ -767,7 +891,6 @@ section article figcaption span {
 /* Desktop (769px+) */
 @media (min-width: 769px) {
   :root {
-    --font-size-base: 1.125rem;
     --font-size-h1: 2.5rem;
     --font-size-h2: 3rem;
   }
@@ -783,9 +906,7 @@ section article figcaption span {
 
   nav {
     justify-content: space-between;
-    flex-wrap: nowrap;
     gap: 0;
-    position: relative;
   }
 
   nav > a:first-of-type {
@@ -849,19 +970,8 @@ section article figcaption span {
 
   .hero #cycle-illustration {
     bottom: 85%;
-    width: 370px;
+    width: 270px;
     height: 218px;
-  }
-
-  .hero [id="service-40-years"] {
-    max-width: min(800px, 100%);
-    bottom: 27%;
-    left: 40%;
-    aspect-ratio: 704 / 223;
-  }
-
-  .hero {
-    min-height: 600px;
   }
 
   .hero figure img:first-of-type {
@@ -885,8 +995,9 @@ section article figcaption span {
   }
 
   .event svg {
-    bottom: 20%;
-    left: 100%;
+    display: block;
+    bottom: 40%;
+    left: 70%;
   }
 
   .articles-grid {
@@ -901,95 +1012,4 @@ section article figcaption span {
   section article figcaption h3 {
     font-size: 1.75rem;
   }
-}
-
-.shop-details dt {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: small;
-  margin-bottom: 0.25rem;
-  color: var(--color-primary);
-}
-
-.shop-details div:not(:last-of-type) {
-  margin-bottom: 1rem;
-}
-
-/* Responsive map iframe */
-.shop-details iframe {
-  max-width: 100%;
-  height: 350px;
-  aspect-ratio: 450 / 350;
-  border: 0;
-}
-
-/* Breadcrumb Navigation */
-nav[aria-label="Breadcrumb"] {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-nav[aria-label="Breadcrumb"] ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-nav[aria-label="Breadcrumb"] li {
-  display: flex;
-  align-items: center;
-}
-
-nav[aria-label="Breadcrumb"] li:not(:last-child)::after {
-  content: "/";
-  margin-left: 0.5rem;
-  color: #6c757d;
-  font-weight: 400;
-}
-
-nav[aria-label="Breadcrumb"] a {
-  color: #5c1f2b;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-nav[aria-label="Breadcrumb"] a:hover {
-  color: #4a1821;
-  text-decoration: underline;
-}
-
-nav[aria-label="Breadcrumb"] li[aria-current="page"] {
-  color: #5c1f2b;
-  font-weight: 600;
-}
-
-/* About section text wrapping */
-
-content {
-  text-align: center;
-}
-.content p {
-  max-width: 60ch;
-  margin: 0 auto 1.5rem;
-}
-
-.content figure figcaption {
-  font-style: italic;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  margin: 0.5rem auto;
-  text-align: center;
-}
-
-/* ============================================
-   utilities
-   ============================================ */
-
-.p-0 {
-  padding: 0;
 }
