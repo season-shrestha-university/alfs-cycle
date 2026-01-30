@@ -39,33 +39,7 @@ Instead of encouraging users to buy products, the website invites them to slow d
 
 ---
 
-## Project Structure
 
-```
-/
-├── index.html
-├── about.html
-├── css/
-│   └── style.css
-├── assets/
-│   └── images/
-└── README.md
-```
-
----
-
-## Academic Context
-
-- **Course:** MA Web Design and Content Management  
-- **Institution:** University of Greenwich  
-- **Project Type:** Academic coursework submission  
-- **Focus Areas:**  
-  - Web design principles  
-  - Content planning and storytelling  
-  - User experience and visual hierarchy  
-  - Clean, maintainable HTML and CSS  
-
----
 
 ## License
 
