@@ -5,7 +5,7 @@ This project is a static marketing website created for **Alf’s Cycles**, a fic
 
 The website focuses on storytelling, emotional connection, and clear content structure rather than sales or e-commerce functionality.
 
-🌐 **Live site:** [https://alfs-cycle.vercel.app/](https://season-shrestha.uk/coursework/design-for-web-content/alfs-cycle/index.html)
+🌐 **Live site:** [[https://alfs-cycle.vercel.app/](https://season-shrestha.uk/coursework/design-for-web-content/alfs-cycle/index.html)](https://season-shrestha.uk/coursework/design-for-web-content/alfs-cycle/index.html)
 
 ---
 
